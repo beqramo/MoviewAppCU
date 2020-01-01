@@ -1,8 +1,10 @@
-package net.movies
+package net.movies.model
 
-data class ArtistDTO(
+import java.io.Serializable
+
+data class Artist(
     val id: String,
     val fullName: String,
     val role: String,
     val imageUrl: String
-)
+): Serializable

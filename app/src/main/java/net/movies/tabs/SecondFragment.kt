@@ -1,4 +1,4 @@
-package net.movies
+package net.movies.tabs
 
 
 import android.os.Bundle
@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import net.movies.R
+import net.movies.model.Movie
 
 
-class SecondFragment(val cast : List<ArtistDTO>) : Fragment() {
+class SecondFragment(val cast : Movie) : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater,

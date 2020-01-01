@@ -1,10 +1,15 @@
-package net.movies
+package net.movies.screen
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import net.movies.services.MovieListResponseDTO
+import net.movies.adapter.MoviesAdapter
+import net.movies.services.MoviesApi
+import net.movies.R
+import net.movies.model.Movie
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,7 +34,8 @@ class MainActivity : AppCompatActivity() {
     private fun fetchMovies(){
         refreshLayout.isRefreshing = true
 
-        MoviesApi().getMovies().enqueue(object : Callback<MovieListResponseDTO> {
+        MoviesApi()
+            .getMovies().enqueue(object : Callback<MovieListResponseDTO> {
             override fun onFailure(call: Call<MovieListResponseDTO>, t: Throwable) {
                 refreshLayout.isRefreshing = false
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
@@ -51,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showMovies(movies: List<Movie>) {
         recyclerViewMovies.layoutManager = LinearLayoutManager(this)
-        recyclerViewMovies.adapter = MoviesAdapter(movies, this)
+        recyclerViewMovies.adapter =
+            MoviesAdapter(movies, this)
     }
 }

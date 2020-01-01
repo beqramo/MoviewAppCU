@@ -1,4 +1,4 @@
-package net.movies
+package net.movies.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.layout_movie.view.*
+import net.movies.R
+import net.movies.model.Movie
+import net.movies.screen.MovieInfoTab
+import java.io.Serializable
 
-class MoviesAdapter(val movies : List<Movie>,val context: Context) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
+class MoviesAdapter(val movies : List<Movie>, val context: Context) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
 
@@ -41,12 +45,14 @@ class MoviesAdapter(val movies : List<Movie>,val context: Context) : RecyclerVie
 //        with(builder)
 //        {
 //            setTitle("Androidly Alert")
-//            setMessage("We have a message $it")
+//            setMessage("We have a message ${movies[it] }")
 //            show()
 //        }
+//        Log.d("movieass", it.toString())
+
 
         val intent = Intent(context, MovieInfoTab::class.java)
-        intent.putExtra("movie", movies[it])
+        intent.putExtra("movie", movies[it]  as Serializable)
         context.startActivity(intent)
     }
 
