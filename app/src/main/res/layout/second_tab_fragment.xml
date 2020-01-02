@@ -1,10 +1,13 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewActors"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="sdasd tab"
-            android:textSize="40sp"/>
+            tools:itemCount="30"
+            tools:listitem="@layout/layout_movie" />
 
 </LinearLayout>

@@ -9,5 +9,6 @@ data class Movie (
     val date: String,
     val language: String,
     val imageUrl: String,
+    val seasons: Int,
     val cast: List<Artist>
 ) : Serializable

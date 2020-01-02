@@ -2,6 +2,7 @@ package net.movies.screen
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.movies_info_tabs.*
 import net.movies.R
@@ -15,7 +16,8 @@ class MovieInfoTab : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.movies_info_tabs)
 
-        val movie = intent.getStringExtra("movie") as Movie
+
+        val movie = intent.getSerializableExtra("movie") as Movie
 
 //        Log.d("movieas",movie )
 

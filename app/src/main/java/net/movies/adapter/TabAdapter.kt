@@ -7,7 +7,7 @@ import net.movies.model.Movie
 import net.movies.tabs.FirstFragment
 import net.movies.tabs.SecondFragment
 
-class MyPagerAdapter(fm: FragmentManager,var movie : Movie) : FragmentPagerAdapter(fm) {
+class MyPagerAdapter(fm: FragmentManager,val movie : Movie) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
@@ -15,7 +15,7 @@ class MyPagerAdapter(fm: FragmentManager,var movie : Movie) : FragmentPagerAdapt
                 FirstFragment(movie)
             }
             else -> {
-                return SecondFragment(movie)
+                return SecondFragment(movie.cast)
             }
         }
     }
