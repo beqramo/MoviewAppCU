@@ -1,4 +1,4 @@
-package net.movies.screen
+package net.movies.activty
 
 import android.os.Bundle
 import android.widget.Toast

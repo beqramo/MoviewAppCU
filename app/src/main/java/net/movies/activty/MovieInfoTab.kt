@@ -1,8 +1,7 @@
-package net.movies.screen
+package net.movies.activty
 
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.movies_info_tabs.*
 import net.movies.R
@@ -20,6 +19,8 @@ class MovieInfoTab : AppCompatActivity() {
         val movie = intent.getSerializableExtra("movie") as Movie
 
 //        Log.d("movieas",movie )
+
+        setTitle(movie.title);
 
         val fragmentAdapter = MyPagerAdapter(supportFragmentManager, movie)
         viewpager_main.adapter = fragmentAdapter

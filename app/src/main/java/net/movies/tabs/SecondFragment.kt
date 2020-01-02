@@ -33,8 +33,8 @@ class SecondFragment(val cast : List<Artist>) : Fragment() {
     }
 
     private fun showActor(actors: List<Artist>) {
-        recyclerViewActors.layoutManager = LinearLayoutManager(this)
+        recyclerViewActors.layoutManager = LinearLayoutManager(context)
         recyclerViewActors.adapter =
-            ActorsAdapter(actors, this)
+            ActorsAdapter(actors)
     }
 }// Required empty public constructor

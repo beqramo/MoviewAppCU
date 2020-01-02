@@ -33,8 +33,9 @@
 
             <TextView
                     android:id="@+id/movieTitlee"
-                    android:layout_width="75dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:maxLines="1"
                     android:text="sdasd tab"
                     android:textFontWeight="700"
                     android:textSize="14sp"
@@ -50,6 +51,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                    android:id="@+id/textView"
                     android:layout_width="87dp"
                     android:layout_height="wrap_content"
                     android:text="release date"
@@ -58,13 +60,15 @@
 
             <TextView
                     android:id="@+id/releaseDate"
-                    android:layout_width="75dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:maxLines="1"
                     android:text="sdasd tab"
                     android:textFontWeight="700"
-
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -86,11 +90,12 @@
                     android:id="@+id/language"
                     android:layout_width="75dp"
                     android:layout_height="wrap_content"
+                    android:maxLines="1"
                     android:text="sdasd tab"
                     android:textFontWeight="700"
-
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:text="sdasd tab"
                     android:textFontWeight="700"
-
+                    android:maxLines="1"
                     android:textSize="14sp"
                     android:textStyle="bold" />
         </androidx.constraintlayout.widget.ConstraintLayout>

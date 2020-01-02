@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.layout_movie.view.*
 import net.movies.R
 import net.movies.model.Movie
-import net.movies.screen.MovieInfoTab
+import net.movies.activty.MovieInfoTab
 import java.io.Serializable
 
 class MoviesAdapter(val movies : List<Movie>, val context: Context) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
